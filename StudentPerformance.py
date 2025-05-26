@@ -14,4 +14,6 @@ y = student_performance.data.targets
 print(student_performance.metadata)
 
 df = pd.read_csv('https://archive.ics.uci.edu/static/public/320/data.csv')
-print(df.info())
+
+df['sex'] = df['sex'].astype('category')
+print(df['sex'].value_counts())
